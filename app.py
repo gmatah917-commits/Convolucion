@@ -89,7 +89,7 @@ ax1.plot(
     tau,
     x,
     'b-',
-    label=r'$x(\tau)$ (Entrada fija)',
+    label='x(τ) entrada fija',
     linewidth=2
 )
 
@@ -97,7 +97,7 @@ ax1.plot(
     tau,
     h_reflejada,
     'r-',
-    label=rf'$h({t:.1f}-\tau)$ (Sistema móvil)',
+    label=f'h({t:.1f} - τ) sistema móvil',
     linewidth=2
 )
 
@@ -109,10 +109,10 @@ ax1.fill_between(
     label='Área del producto'
 )
 
-ax1.set_title(r'Dominio de $\tau$: desplazamiento e integración')
+ax1.set_title('Dominio de τ: desplazamiento e integración')
 ax1.set_xlim(-2, 7)
 ax1.set_ylim(-0.2, 1.3)
-ax1.set_xlabel(r'$\tau$')
+ax1.set_xlabel('τ')
 ax1.set_ylabel('Amplitud')
 ax1.grid(True)
 ax1.legend(loc='upper right')
@@ -123,7 +123,7 @@ ax2.plot(
     y_completa,
     'g--',
     alpha=0.3,
-    label=r'$y(t)$ completo'
+    label='y(t) completo'
 )
 
 if len(t_actual) > 0:
@@ -143,17 +143,17 @@ if len(t_actual) > 0:
     )
 
 ax2.set_title(
-    rf'Dominio del tiempo: señal de salida resultante $y(t)$ en el instante $t={t:.1f}$'
+    f'Dominio del tiempo: señal de salida y(t) en el instante t = {t:.1f}'
 )
 
 ax2.set_xlim(-2, 7)
 ax2.set_ylim(-0.1, 1.1)
-ax2.set_xlabel(r'$t$')
-ax2.set_ylabel(r'$y(t)$')
+ax2.set_xlabel('t')
+ax2.set_ylabel('y(t)')
 ax2.grid(True)
 ax2.legend(loc='upper right')
 
-plt.tight_layout()
+fig.tight_layout()
 
 st.pyplot(fig)
 
