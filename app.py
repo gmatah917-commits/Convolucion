@@ -83,6 +83,10 @@ y_actual = y_completa[t_vector <= t]
 # --------------------------------------------------
 
 fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(6.0, 3.8))
+titulo_fs = 9
+ejes_fs = 8
+ticks_fs = 7
+leyenda_fs = 7
 
 # Gráfica 1: Entrada x(tau) e impulso móvil h(t - tau)
 ax1.plot(
@@ -109,13 +113,19 @@ ax1.fill_between(
     label='Área del producto'
 )
 
-ax1.set_title('Dominio de τ: desplazamiento e integración')
-ax1.set_xlim(-2, 7)
-ax1.set_ylim(-0.2, 1.3)
-ax1.set_xlabel('τ')
-ax1.set_ylabel('Amplitud')
-ax1.grid(True)
-ax1.legend(loc='upper right')
+ax1.set_title('Dominio de τ: desplazamiento e integración', fontsize=titulo_fs)
+ax1.set_xlabel('τ', fontsize=ejes_fs)
+ax1.set_ylabel('Amplitud', fontsize=ejes_fs)
+ax1.tick_params(axis='both', labelsize=ticks_fs)
+ax1.legend(loc='upper right', fontsize=leyenda_fs)
+
+# ax1.set_title('Dominio de τ: desplazamiento e integración')
+#ax1.set_xlim(-2, 7)
+# ax1.set_ylim(-0.2, 1.3)
+# ax1.set_xlabel('τ')
+# ax1.set_ylabel('Amplitud')
+# ax1.grid(True)
+# ax1.legend(loc='upper right')
 
 # Gráfica 2: Construcción de la salida y(t)
 ax2.plot(
