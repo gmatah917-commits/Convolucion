@@ -94,7 +94,7 @@ ax1.plot(
     x,
     'b-',
     label='x(τ) entrada fija',
-    linewidth=2
+    linewidth=1.6
 )
 
 ax1.plot(
@@ -102,7 +102,7 @@ ax1.plot(
     h_reflejada,
     'r-',
     label=f'h({t:.1f} - τ) sistema móvil',
-    linewidth=2
+    linewidth=1.6
 )
 
 ax1.fill_between(
@@ -114,18 +114,13 @@ ax1.fill_between(
 )
 
 ax1.set_title('Dominio de τ: desplazamiento e integración', fontsize=titulo_fs)
+ax1.set_xlim(-2, 7)
+ax1.set_ylim(-0.2, 1.3)
 ax1.set_xlabel('τ', fontsize=ejes_fs)
 ax1.set_ylabel('Amplitud', fontsize=ejes_fs)
 ax1.tick_params(axis='both', labelsize=ticks_fs)
+ax1.grid(True)
 ax1.legend(loc='upper right', fontsize=leyenda_fs)
-
-# ax1.set_title('Dominio de τ: desplazamiento e integración')
-# ax1.set_xlim(-2, 7)
-# ax1.set_ylim(-0.2, 1.3)
-# ax1.set_xlabel('τ')
-# ax1.set_ylabel('Amplitud')
-# ax1.grid(True)
-# ax1.legend(loc='upper right')
 
 # Gráfica 2: Construcción de la salida y(t)
 ax2.plot(
@@ -133,7 +128,8 @@ ax2.plot(
     y_completa,
     'g--',
     alpha=0.3,
-    label='y(t) completo'
+    label='y(t) completo',
+    linewidth=1.5
 )
 
 if len(t_actual) > 0:
@@ -141,7 +137,7 @@ if len(t_actual) > 0:
         t_actual,
         y_actual,
         'g-',
-        linewidth=2.5,
+        linewidth=1.8,
         label='Salida acumulada'
     )
 
@@ -149,7 +145,7 @@ if len(t_actual) > 0:
         t,
         y_actual[-1],
         'go',
-        markersize=8
+        markersize=5
     )
 
 ax2.set_title(
@@ -157,30 +153,21 @@ ax2.set_title(
     fontsize=titulo_fs
 )
 
+ax2.set_xlim(-2, 7)
+ax2.set_ylim(-0.1, 1.1)
 ax2.set_xlabel('t', fontsize=ejes_fs)
 ax2.set_ylabel('y(t)', fontsize=ejes_fs)
 ax2.tick_params(axis='both', labelsize=ticks_fs)
+ax2.grid(True)
 ax2.legend(loc='upper right', fontsize=leyenda_fs)
 
-#ax2.set_title(
-#    f'Dominio del tiempo: señal de salida y(t) en el instante t = {t:.1f}'
-#)
+fig.tight_layout(pad=0.8)
 
-ax2.set_xlim(-2, 7)
-ax2.set_ylim(-0.1, 1.1)
-# ax2.set_xlabel('t')
-# ax2.set_ylabel('y(t)')
-ax2.grid(True)
-# ax2.legend(loc='upper right')
-
-fig.tight_layout()
-
-#st.pyplot(fig)
-col1, col2, col3 = st.columns([1, 4, 1])
+col1, col2, col3 = st.columns([1.5, 4, 1.5])
 
 with col2:
     st.pyplot(fig, use_container_width=True)
-
+    
 # --------------------------------------------------
 # Resultado numérico
 # --------------------------------------------------
