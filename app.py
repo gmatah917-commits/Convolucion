@@ -165,8 +165,8 @@ with col2:
 # Resultado numérico
 # --------------------------------------------------
 
-st.subheader("Resultado numérico")
+#st.subheader("Resultado numérico")
 
-st.latex(
-    rf"y({t:.2f}) \approx {y_t:.4f}"
-)
+#st.latex(
+#    rf"y({t:.2f}) \approx {y_t:.4f}"
+#)
