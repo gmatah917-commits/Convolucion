@@ -163,8 +163,8 @@ ax2.tick_params(axis='both', labelsize=ticks_fs)
 ax2.legend(loc='upper right', fontsize=leyenda_fs)
 
 #ax2.set_title(
-    f'Dominio del tiempo: señal de salida y(t) en el instante t = {t:.1f}'
-)
+#    f'Dominio del tiempo: señal de salida y(t) en el instante t = {t:.1f}'
+#)
 
 ax2.set_xlim(-2, 7)
 ax2.set_ylim(-0.1, 1.1)
