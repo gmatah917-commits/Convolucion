@@ -36,14 +36,14 @@ t = st.slider(
     min_value=-1.0,
     max_value=6.0,
     value=-1.0,
-    step=0.01
+    step=0.1
 )
 
 # --------------------------------------------------
 # Definición del dominio de integración
 # --------------------------------------------------
 
-tau = np.linspace(-5, 10, 1000)
+tau = np.linspace(-5, 10, 600)
 
 # Señal de entrada x(tau): pulso rectangular de duración 3 segundos
 x = np.where((tau >= 0) & (tau <= 3), 1.0, 0.0)
@@ -65,7 +65,7 @@ y_t = trapezoid(producto, tau)
 # Cálculo de la salida completa y(t)
 # --------------------------------------------------
 
-t_vector = np.linspace(-3, 8, 200)
+t_vector = np.linspace(-3, 8, 160)
 y_completa = []
 
 for tv in t_vector:
