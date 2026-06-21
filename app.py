@@ -82,7 +82,7 @@ y_actual = y_completa[t_vector <= t]
 # Gráficas
 # --------------------------------------------------
 
-fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(10, 6))
+fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(7.5, 4.5))
 
 # Gráfica 1: Entrada x(tau) e impulso móvil h(t - tau)
 ax1.plot(
@@ -155,7 +155,11 @@ ax2.legend(loc='upper right')
 
 fig.tight_layout()
 
-st.pyplot(fig)
+#st.pyplot(fig)
+col1, col2, col3 = st.columns([1, 4, 1])
+
+with col2:
+    st.pyplot(fig, use_container_width=True)
 
 # --------------------------------------------------
 # Resultado numérico
