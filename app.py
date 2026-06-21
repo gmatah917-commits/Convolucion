@@ -65,25 +65,14 @@ y_t = trapezoid(producto, tau)
 # Cálculo de la salida completa y(t)
 # --------------------------------------------------
 
-# --------------------------------------------------
-# Cálculo rápido de la salida completa y(t)
-# --------------------------------------------------
+t_vector = np.linspace(-3, 8, 200)
+y_completa = []
 
-t_vector = np.linspace(-3, 8, 160)
+for tv in t_vector:
+    h_tv = np.where((tv - tau >= 0), np.exp(-(tv - tau)), 0.0)
+    y_completa.append(trapezoid(x * h_tv, tau))
 
-y_completa = np.piecewise(
-    t_vector,
-    [
-        t_vector < 0,
-        (t_vector >= 0) & (t_vector <= 3),
-        t_vector > 3
-    ],
-    [
-        0,
-        lambda tt: 1 - np.exp(-tt),
-        lambda tt: (1 - np.exp(-3)) * np.exp(-(tt - 3))
-    ]
-)
+y_completa = np.array(y_completa)
 # --------------------------------------------------
 # Gráficas
 # --------------------------------------------------
