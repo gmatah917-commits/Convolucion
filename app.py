@@ -36,7 +36,7 @@ t = st.slider(
     min_value=-1.0,
     max_value=6.0,
     value=-1.0,
-    step=0.05
+    step=0.01
 )
 
 # --------------------------------------------------
@@ -166,7 +166,7 @@ fig.tight_layout(pad=0.8)
 col1, col2, col3 = st.columns([1.5, 4, 1.5])
 
 with col2:
-    st.pyplot(fig, use_container_width=True)
+    st.pyplot(fig, use_container_width=False)
     
 # --------------------------------------------------
 # Resultado numérico
