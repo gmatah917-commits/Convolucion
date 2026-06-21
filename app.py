@@ -73,6 +73,10 @@ for tv in t_vector:
     y_completa.append(trapezoid(x * h_tv, tau))
 
 y_completa = np.array(y_completa)
+
+# Salida acumulada hasta el instante t
+t_actual = t_vector[t_vector <= t]
+y_actual = y_completa[t_vector <= t]
 # --------------------------------------------------
 # Gráficas
 # --------------------------------------------------
