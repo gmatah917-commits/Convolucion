@@ -124,7 +124,7 @@ ax1.legend(loc='upper right', fontsize=leyenda_fs)
 # ax1.set_ylim(-0.2, 1.3)
 # ax1.set_xlabel('τ')
 # ax1.set_ylabel('Amplitud')
- ax1.grid(True)
+# ax1.grid(True)
 # ax1.legend(loc='upper right')
 
 # Gráfica 2: Construcción de la salida y(t)
