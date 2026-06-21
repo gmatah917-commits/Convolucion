@@ -82,7 +82,7 @@ y_actual = y_completa[t_vector <= t]
 # Gráficas
 # --------------------------------------------------
 
-fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(5.5, 2.5))
+fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(5.5, 4.5))
 
 # Gráfica 1: Entrada x(tau) e impulso móvil h(t - tau)
 ax1.plot(
