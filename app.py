@@ -120,11 +120,11 @@ ax1.tick_params(axis='both', labelsize=ticks_fs)
 ax1.legend(loc='upper right', fontsize=leyenda_fs)
 
 # ax1.set_title('Dominio de τ: desplazamiento e integración')
-#ax1.set_xlim(-2, 7)
+# ax1.set_xlim(-2, 7)
 # ax1.set_ylim(-0.2, 1.3)
 # ax1.set_xlabel('τ')
 # ax1.set_ylabel('Amplitud')
-# ax1.grid(True)
+ ax1.grid(True)
 # ax1.legend(loc='upper right')
 
 # Gráfica 2: Construcción de la salida y(t)
@@ -153,15 +153,25 @@ if len(t_actual) > 0:
     )
 
 ax2.set_title(
+    f'Dominio del tiempo: señal de salida y(t) en el instante t = {t:.1f}',
+    fontsize=titulo_fs
+)
+
+ax2.set_xlabel('t', fontsize=ejes_fs)
+ax2.set_ylabel('y(t)', fontsize=ejes_fs)
+ax2.tick_params(axis='both', labelsize=ticks_fs)
+ax2.legend(loc='upper right', fontsize=leyenda_fs)
+
+#ax2.set_title(
     f'Dominio del tiempo: señal de salida y(t) en el instante t = {t:.1f}'
 )
 
 ax2.set_xlim(-2, 7)
 ax2.set_ylim(-0.1, 1.1)
-ax2.set_xlabel('t')
-ax2.set_ylabel('y(t)')
+# ax2.set_xlabel('t')
+# ax2.set_ylabel('y(t)')
 ax2.grid(True)
-ax2.legend(loc='upper right')
+# ax2.legend(loc='upper right')
 
 fig.tight_layout()
 
