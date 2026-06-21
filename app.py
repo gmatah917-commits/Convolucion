@@ -12,20 +12,20 @@ st.set_page_config(
     layout="wide"
 )
 
-st.title("Simulador de Convolución Temporal")
+#st.title("Simulador de Convolución Temporal")
 
-st.markdown(
-    r"""
-Este simulador permite visualizar gráficamente el proceso de convolución temporal:
+#st.markdown(
+#    r"""
+#Este simulador permite visualizar gráficamente el proceso de convolución temporal:
 
-\[
-y(t)=\int_{-\infty}^{\infty}x(\tau)h(t-\tau)\,d\tau.
-\]
+#\[
+#y(t)=\int_{-\infty}^{\infty}x(\tau)h(t-\tau)\,d\tau.
+#\]
 
-La señal \(x(\tau)\) permanece fija, mientras que \(h(t-\tau)\) se desplaza al modificar el valor de \(t\).
-El área sombreada representa el producto \(x(\tau)h(t-\tau)\), cuya integral corresponde al valor de la salida \(y(t)\).
-"""
-)
+#La señal \(x(\tau)\) permanece fija, mientras que \(h(t-\tau)\) se desplaza al modificar el valor de \(t\).
+#El área sombreada representa el producto \(x(\tau)h(t-\tau)\), cuya integral corresponde al valor de la salida \(y(t)\).
+#"""
+#)
 
 # --------------------------------------------------
 # Control interactivo
