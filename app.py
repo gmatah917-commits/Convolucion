@@ -82,7 +82,7 @@ y_actual = y_completa[t_vector <= t]
 # Gráficas
 # --------------------------------------------------
 
-fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(6.0, 3.8))
+fig, (ax1, ax2) = plt.subplots(2, 1, figsize=(5.5, 3.8))
 titulo_fs = 9
 ejes_fs = 8
 ticks_fs = 7
